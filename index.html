@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+        <form action="/login" id="loginForm" method="POST">
+            <h2>Área Restrita</h2>
+            <div class="input-group">
+                <input type="text" id="username"  name="username" required>
+                <label for="username">Usuário</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Senha</label>
+            </div>
+            <button type="submit">Continuar</button>
+            <div class="signUp-link">
+                <p id="success" style="color: green;"></p>
+                <p id="error" style="color: red;"></p>
+                <p>Não tem uma conta? <a href="#" class="signUpBtnLink">Registre-se</a></p> 
+            </div>
+        </form>
+    </div>
+
+        <div class="form-wrapper sign-up">
+        <form id="signupForm" action="/register" method="POST">
+            <h2>Área de Registro</h2>
+            <div class="input-group">
+                <input type="text" name="usernameRegister" id="usernameRegister" required>
+                <label for="usernameRegister">Usuário</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="passwordRegister" id="passwordRegister" required>
+                <label for="passwordRegister">Senha</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="confirm_password" id="confirm_password" required>
+                <label for="confirm_password">Confirmar a senha</label>
+            </div>
+            <button type="submit" id="submitButton">Registrar</button>
+            <div class="signUp-link">
+                <p id="successRegister" style="color: green;"></p>
+                <p id="errorRegister" style="color: red;"></p>
+                <p>Já tem uma conta? <a href="#" class="signInBtnLink">Faça o log-in</a></p> 
+            </div>
+        </form>
+        </div>
+    </div> 
+    <div id="particles-js">
+    </div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
